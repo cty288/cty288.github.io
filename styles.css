@@ -281,9 +281,22 @@ h3 {
   height: 0.9rem;
 }
 
-.email-link {
+.hero-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--cardinal-dark);
-  background: rgba(155, 44, 44, 0.08);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+.hero-email svg {
+  flex: 0 0 auto;
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .hero-actions,
