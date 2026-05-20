@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Tianyi (Tim) Chen is a Stanford Computer Science master's student focused on AI systems, LLM agents, and infrastructure."
+    />
+    <meta name="theme-color" content="#f7f2e8" />
+    <title>Tianyi (Tim) Chen</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Tianyi Chen home">
+        <span class="brand-mark">TC</span>
+        <span class="brand-text">Tianyi Chen</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <i data-lucide="menu" aria-hidden="true"></i>
+        <span class="sr-only">Open navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Stanford CS / AI systems / LLM agents / infrastructure</p>
+          <h1 id="hero-title">I build systems that keep long plans, fast code, and intelligent tools coherent.</h1>
+          <p class="hero-copy">
+            I am a Master's student in Computer Science at Stanford University, focusing on AI and
+            systems, with recent work across LLM agents, backend infrastructure, and scalable
+            framework design.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#work">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              Explore work
+            </a>
+            <a class="button secondary" href="Resume_TimChen.pdf">
+              <i data-lucide="file-down" aria-hidden="true"></i>
+              Resume
+            </a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Profile snapshot">
+          <div class="identity-visual">
+            <span class="identity-track track-ai" aria-hidden="true"></span>
+            <span class="identity-track track-sys" aria-hidden="true"></span>
+            <span class="identity-track track-game" aria-hidden="true"></span>
+            <div class="identity-core">
+              <img class="avatar-photo" src="assets/avatar-headshot.jpg" alt="Portrait of Tianyi Chen" />
+            </div>
+            <div class="identity-chip chip-ai">AI</div>
+            <div class="identity-chip chip-sys">SYS</div>
+            <div class="identity-chip chip-game">GAME DEV</div>
+          </div>
+          <div class="signal-card">
+            <span class="signal-label">Current focus</span>
+            <strong>LLM agents / infrastructure</strong>
+            <p>Building long-horizon reasoning systems and production infrastructure that stay reliable under real workload pressure.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section profile-summary" id="about" aria-labelledby="about-title">
+        <div class="profile-kicker">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Systems instincts, AI focus.</h2>
+        </div>
+        <div class="profile-copy">
+          <p>
+            I am a Master's student in Computer Science at Stanford University, focusing on AI and
+            systems. My recent industry experience includes a backend engineering internship at
+            Stripe, and I will be returning to Stripe's Risk Capabilities group as a full-time
+            engineer. On the research side, I co-develop ReCAP, a recursive reasoning and planning
+            framework for large language models.
+          </p>
+          <p>
+            Before Stanford, I founded Kromo Games, a student-led studio where I led the development
+            of Mikrocosmos, a multiplayer game with over 25,000 downloads on Steam. To support its
+            growth, I built MikroFramework, a modular game framework inspired by MVC principles that
+            emphasized scalability and extensibility. This early experience in systems and framework
+            design continues to influence how I approach engineering challenges today.
+          </p>
+          <p>
+            I am motivated by problems at the intersection of systems and intelligent systems, and I
+            enjoy building infrastructure and platforms that enable breakthroughs in AI and
+            data-driven applications.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Recent work with a systems spine.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card large recap-card reveal">
+            <div class="card-topline">
+              <span>Research / LLM Agents</span>
+              <a href="https://arxiv.org/abs/2510.23822" aria-label="Open ReCAP paper">
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="recap-figures">
+              <figure class="project-figure recap-figure">
+                <img
+                  src="assets/recap-rollout.png"
+                  alt="ReCAP recursive planning diagram showing task, plan, copied blocks, observations, context injection, and a sliding context window across recursion depths."
+                  width="2056"
+                  height="506"
+                />
+              </figure>
+              <figure class="project-figure recap-figure recap-subtree-figure">
+                <img
+                  src="assets/recap-local-subtree.png"
+                  alt="ReCAP local reasoning subtree diagram showing a current task, just-finished subtask, first remaining subtask, injected old reasoning, new reasoning, and refined subtasks."
+                  width="940"
+                  height="792"
+                />
+              </figure>
+            </div>
+            <div class="feature-copy">
+              <h3>ReCAP: Recursive Context-Aware Reasoning and Planning for Large Language Model Agents</h3>
+              <p class="paper-meta">Zhenyu Zhang, Tianyi Chen, Weiran Xu, Alex Pentland, Jiaxin Pei</p>
+              <div class="meta-row">
+                <a href="https://arxiv.org/abs/2510.23822">arXiv:2510.23822</a>
+                <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115819">NeurIPS 2025</a>
+              </div>
+              <p>
+                Co-developed a hierarchical framework for long-horizon LLM agents that plans ahead,
+                executes the first subtask, recursively decomposes composite work, and re-injects the
+                parent plan on return to keep multi-level context coherent.
+              </p>
+              <ul class="compact-list">
+                <li>Combines plan-ahead decomposition, structured parent-plan re-injection, and bounded active prompts.</li>
+                <li>Evaluated under strict pass@1 on Robotouille, ALFWorld, FEVER, and SWE-bench.</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://arxiv.org/abs/2510.23822">Paper</a>
+                <a href="https://github.com/ReCAP-Stanford/ReCAP">Code</a>
+                <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115819">NeurIPS poster</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="card-topline">
+              <span>Infrastructure / Stripe</span>
+              <i data-lucide="server-cog" aria-hidden="true"></i>
+            </div>
+            <h3>Rules infrastructure performance</h3>
+            <p>
+              Optimized a core database interaction by adding a pre-check that reduced daily write
+              transactions by over 85%, then drove a synchronous execution refactor that increased
+              throughput under load.
+            </p>
+            <p class="systems-note">Write-path optimization / execution architecture / production-safe rollout</p>
+          </article>
+
+          <article class="feature-card media-card reveal">
+            <img src="assets/mikrocosmos-capsule.jpg" alt="Mikrocosmos Steam capsule artwork" />
+            <div class="card-topline">
+              <span>Earlier systems / game tech</span>
+              <a href="https://store.steampowered.com/app/2286320/_/" aria-label="Open Mikrocosmos on Steam">
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3>Mikrocosmos</h3>
+            <p>
+              Led a 6-person team building an online multiplayer strategy-action game with Unity,
+              Mirror networking, PlayFab/Azure backend services, and hot-update driven content systems.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">Planning, graphs, and grounded models.</h2>
+          <p>
+            My research work sits near the boundary between model capability and the systems that
+            make those capabilities usable in longer tasks.
+          </p>
+        </div>
+        <div class="research-list">
+          <article class="research-item reveal">
+            <span class="year">2025</span>
+            <h3>ReCAP: Recursive Context-Aware Reasoning and Planning for Large Language Model Agents</h3>
+            <p class="paper-meta">Zhenyu Zhang, Tianyi Chen, Weiran Xu, Alex Pentland, Jiaxin Pei</p>
+            <p>
+              Designed core inference architecture for recursive, context-aware agent execution:
+              plan-ahead decomposition, structured parent-plan re-injection during backtracking,
+              bounded context management, and benchmark evaluation across embodied, fact-checking,
+              and coding tasks.
+            </p>
+            <div class="link-row">
+              <a href="https://arxiv.org/abs/2510.23822">arXiv:2510.23822</a>
+              <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115819">NeurIPS 2025</a>
+              <a href="https://github.com/ReCAP-Stanford/ReCAP">Code</a>
+            </div>
+          </article>
+          <article class="research-item reveal">
+            <span class="year">2024</span>
+            <h3>Water Quality Analysis and Prediction in Unmonitored Networks with RGCNs</h3>
+            <p>
+              Built a Transformer-enhanced relational graph convolutional model to capture temporal
+              and spatial dependencies in unmonitored water networks, improving over GCN and RGCN baselines.
+            </p>
+            <div class="tag-row">
+              <span>PyTorch</span>
+              <span>PyG</span>
+              <span>Graph ML</span>
+            </div>
+          </article>
+          <article class="research-item reveal">
+            <span class="year">2023-24</span>
+            <h3>Cataract surgery simulator</h3>
+            <p>
+              Developed a Unity-based haptic simulator with surgical-step replication, educational
+              tools, and 3D Systems Touch device integration; awarded NYU Dean's Undergraduate Research Fund.
+            </p>
+            <div class="tag-row">
+              <span>Unity</span>
+              <span>Haptics</span>
+              <span>Simulation</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Research depth, production pressure, shipped software.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="org-logo stanford">
+              <img src="assets/logos/stanford-square.svg" alt="Stanford University logo" />
+            </div>
+            <div class="timeline-date">Sep 2025 - Present</div>
+            <div>
+              <h3>Stanford University Computer Science Department</h3>
+              <p class="role">
+                Course Assistant for
+                <a href="https://web.stanford.edu/class/cs224w/">CS224W</a> and
+                <a href="https://web.stanford.edu/class/cs246/index.html#content">CS246</a>
+                / Research Assistant
+              </p>
+              <p>
+                Core contributor to large-scale graph ML and data mining courses under Prof. Jure
+                Leskovec, including assignments, exams, office hours, and course design, while
+                researching LLM-based reasoning systems with Jiaxin Pei and Alex Pentland.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="org-logo stripe">
+              <img src="assets/logos/stripe-square.svg" alt="Stripe logo" />
+            </div>
+            <div class="timeline-date">Jun 2025 - Sep 2025</div>
+            <div>
+              <h3>Stripe</h3>
+              <p class="role">Returning Full-time Engineer, Risk Capabilities / Engineer Intern, Rules Infrastructure</p>
+              <p>
+                Returning to Stripe's Risk Capabilities group full time after reducing database write
+                load, simplifying execution architecture, and validating production changes with
+                feature flags and monitoring during the internship.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="org-logo jj">
+              <img src="assets/logos/jj-square.svg" alt="Johnson & Johnson logo" />
+            </div>
+            <div class="timeline-date">Jun 2023 - Sep 2023</div>
+            <div>
+              <h3>Johnson & Johnson</h3>
+              <p class="role">Backend Development Intern</p>
+              <p>
+                Built logistics prediction systems and improved a complex table query/pagination flow
+                by 60% using TypeScript, NestJS, SQL Server, and TypeORM.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="org-logo kromo">
+              <img src="assets/1664666793042.jfif" alt="Kromo Games logo" />
+            </div>
+            <div class="timeline-date">Mar 2022 - May 2024</div>
+            <div>
+              <h3>Kromo Games</h3>
+              <p class="role">Co-founder, Lead Game Developer</p>
+              <p>
+                Led a small team shipping Mikrocosmos, integrating multiplayer networking, PlayFab/Azure
+                services, rapid feedback cycles, and extensible game systems.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading project-heading">
+          <div>
+              <p class="eyebrow">Project archive</p>
+            <h2 id="projects-title">Selected research, infrastructure, and shipped projects.</h2>
+          </div>
+          <div class="filter-group" aria-label="Filter projects">
+            <button type="button" class="filter-button active" data-filter="all">All</button>
+            <button type="button" class="filter-button" data-filter="ai">AI / Systems</button>
+            <button type="button" class="filter-button" data-filter="game">Games</button>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="project-card priority-card reveal" data-category="ai">
+            <span>AI Research</span>
+            <h3>ReCAP: Recursive Context-Aware Reasoning and Planning for Large Language Model Agents</h3>
+            <p>NeurIPS 2025 framework for recursive planning, bounded context management, and parent-plan re-injection in long-horizon LLM agents.</p>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2510.23822">Paper</a>
+              <a href="https://github.com/ReCAP-Stanford/ReCAP">Code</a>
+              <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115819">NeurIPS</a>
+            </div>
+          </article>
+          <article class="project-card featured-project reveal" data-category="ai">
+            <figure class="project-figure rgcn-figure">
+              <img
+                src="assets/rgcn-pipeline.png"
+                alt="The RGCN pipeline with node features, edge features, a relational GNN, repeated graph attention layers with edge features, and a linear projection head."
+                width="1050"
+                height="413"
+              />
+            </figure>
+            <span>Graph ML</span>
+            <h3>Water Quality RGCN</h3>
+            <p>Transformer-enhanced RGCN for spatial-temporal prediction in unmonitored networks.</p>
+            <a href="https://medium.com/stanford-cs224w/predicting-water-quality-in-unmonitored-networks-with-rgcns-c72fdd177f0d">Read writeup</a>
+          </article>
+          <article class="project-card reveal" data-category="game">
+            <span>Unity Framework</span>
+            <h3>MikroFramework</h3>
+            <p>MVC-oriented Unity framework with event systems, code generation, IOC, pools, hot-update, and resource management.</p>
+            <a href="https://github.com/cty288/MikroFramework">GitHub</a>
+          </article>
+          <article class="project-card reveal" data-category="game">
+            <span>Steam Game</span>
+            <h3>Mikrocosmos</h3>
+            <p>Multiplayer trading-and-combat party game with networking and backend service integration.</p>
+            <a href="https://store.steampowered.com/app/2286320/_/">Steam</a>
+          </article>
+          <article class="project-card reveal" data-category="game">
+            <span>itch.io Game</span>
+            <h3>To Oasis</h3>
+            <p>Earlier indie game project published on itch.io, part of the undergraduate game-development period that led into systems tooling work.</p>
+            <a href="https://cty288.itch.io/to-oasis">itch.io</a>
+          </article>
+          <article class="project-card reveal" data-category="game">
+            <span>Horror Puzzle</span>
+            <h3>Darkest Shadows</h3>
+            <p>Point-and-click puzzle game with branching decisions, survival tension, and multiple endings.</p>
+            <a href="https://cty288.itch.io/darkest-shadow">itch.io</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="skills-title">What I reach for.</h2>
+        </div>
+        <div class="skill-bands">
+          <div>
+            <h3>Programming Languages</h3>
+            <p>Python, C++, C#, TypeScript, JavaScript, Java, SQL</p>
+          </div>
+          <div>
+            <h3>AI & Data</h3>
+            <p>PyTorch, PyG, Triton, Hugging Face Transformers, scikit-learn, Pandas, NumPy, NetworkX, OpenCV</p>
+          </div>
+          <div>
+            <h3>Backend & Infra</h3>
+            <p>Node.js, NestJS, SQL Server, Spark, Kafka, Docker, AWS, GCP, Azure, Grafana, Splunk, CI/CD</p>
+          </div>
+          <div>
+            <h3>Game & Simulation</h3>
+            <p>Unity, Mirror, PlayFab, MVC architecture, hot-update systems, shaders, haptics</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Open to research conversations, systems work, and ambitious technical projects.</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:tchen288@stanford.edu">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            tchen288@stanford.edu
+          </a>
+          <a class="button secondary" href="https://www.linkedin.com/in/tianyi-chen-6970071ab/">
+            <i data-lucide="badge-check" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+          <a class="button secondary" href="https://github.com/cty288?tab=repositories">
+            <i data-lucide="code-2" aria-hidden="true"></i>
+            GitHub
+          </a>
+          <a class="button secondary" href="https://scholar.google.com/citations?user=ipKy0MEAAAAJ&hl=en">
+            <i data-lucide="graduation-cap" aria-hidden="true"></i>
+            Scholar
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Tianyi (Tim) Chen</span>
+    </footer>
+  </body>
+</html>
