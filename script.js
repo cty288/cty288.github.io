@@ -66,6 +66,7 @@ document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe
 
 const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
 const projectCards = Array.from(document.querySelectorAll(".project-card"));
+const copyEmailBubbles = Array.from(document.querySelectorAll("[data-copy-email]"));
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -79,6 +80,73 @@ filterButtons.forEach((button) => {
       const shouldShow = filter === "all" || card.dataset.category === filter;
       card.hidden = !shouldShow;
     });
+  });
+});
+
+const copyToClipboard = async (text) => {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.top = "-9999px";
+  document.body.append(textArea);
+  textArea.select();
+
+  const didCopy = document.execCommand("copy");
+  textArea.remove();
+
+  if (!didCopy) {
+    throw new Error("Clipboard copy command failed.");
+  }
+};
+
+copyEmailBubbles.forEach((bubble) => {
+  const textElement = bubble.querySelector(".email-copy-text");
+  const email = bubble.dataset.copyEmail;
+  const defaultText = textElement?.textContent || email;
+  let resetTimer;
+
+  const showCopyState = (message, className) => {
+    window.clearTimeout(resetTimer);
+    bubble.classList.remove("is-copied", "is-copy-failed");
+    bubble.classList.add(className);
+
+    if (textElement) {
+      textElement.textContent = message;
+    }
+
+    resetTimer = window.setTimeout(() => {
+      bubble.classList.remove(className);
+
+      if (textElement) {
+        textElement.textContent = defaultText;
+      }
+    }, 1400);
+  };
+
+  const handleCopy = async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    try {
+      await copyToClipboard(email);
+      showCopyState(bubble.dataset.copyFeedback || "Copied", "is-copied");
+    } catch (error) {
+      console.error("Could not copy email address.", error);
+      showCopyState("Copy failed", "is-copy-failed");
+    }
+  };
+
+  bubble.addEventListener("click", handleCopy);
+  bubble.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleCopy(event);
+    }
   });
 });
 

@@ -314,6 +314,7 @@ h3 {
   color: var(--cardinal-dark);
   background: rgba(255, 250, 240, 0.98);
   box-shadow: 0 16px 40px rgba(35, 31, 29, 0.14);
+  cursor: copy;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.2;
@@ -322,6 +323,21 @@ h3 {
   transform: translateY(-4px);
   transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
   visibility: hidden;
+}
+
+.email-copy-bubble:focus-visible {
+  outline: 3px solid rgba(155, 44, 44, 0.2);
+  outline-offset: 3px;
+}
+
+.email-copy-bubble.is-copied {
+  color: #1d4f3a;
+  background: rgba(235, 248, 241, 0.98);
+}
+
+.email-copy-bubble.is-copy-failed {
+  color: var(--cardinal-dark);
+  background: rgba(255, 238, 232, 0.98);
 }
 
 .email-copy-text {
