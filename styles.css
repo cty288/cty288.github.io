@@ -243,6 +243,49 @@ h3 {
   font-size: 1.08rem;
 }
 
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 720px;
+  margin-top: 1rem;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2rem;
+  max-width: 100%;
+  padding: 0.38rem 0.62rem;
+  border: 1px solid rgba(29, 36, 36, 0.12);
+  border-radius: 999px;
+  color: #3f4846;
+  background: rgba(255, 250, 240, 0.65);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.hero-link:hover {
+  color: var(--ink);
+  border-color: rgba(111, 31, 36, 0.24);
+  background: rgba(255, 250, 240, 0.9);
+}
+
+.hero-link svg {
+  flex: 0 0 auto;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.email-link {
+  color: var(--cardinal-dark);
+  background: rgba(155, 44, 44, 0.08);
+}
+
 .hero-actions,
 .contact-actions,
 .link-row {
